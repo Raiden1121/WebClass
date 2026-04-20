@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Inline-block & Float with Overflow</title>
+
+<style>
+body {
+    background: #eee;
+    font-family: Georgia, serif;
+}
+
+/* 外框容器 */
+.wrapper {
+    width: 1000px;
+    margin: 50px auto;
+    background: #f9f9f9;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 右側浮動區塊 */
+.float-box {
+    float: right;
+    width: 260px;
+    height: 220px;          /* ✅ 關鍵：固定高度 */
+    overflow: auto;         /* ✅ 觸發 scrollbar */
+    border: 6px solid green;
+    padding: 15px;
+    background: white;
+    margin-left: 25px;
+    line-height: 1.6;
+}
+
+/* 文字段落 */
+.text {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+/* inline-block 高亮 */
+.highlight {
+    display: inline-block;
+    background: yellow;
+    border: 3px solid blue;
+    padding: 2px 8px;
+    margin: 0 3px;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- 右側 scroll 區 -->
+    <div class="float-box">
+        A float div with overflow auto. A float div with overflow auto.
+        A float div with overflow auto. A float div with overflow auto.
+        A float div with overflow auto. A float div with overflow auto.
+        A float div with overflow auto. A float div with overflow auto.
+        A float div with overflow auto. A float div with overflow auto.
+    </div>
+
+    <!-- 主文字 -->
+    <div class="text">
+        Let me not to the marriage of true minds admit impediments.
+        <span class="highlight">Love</span> is not love which alters when it alteration finds,
+        Or bends with the remover to remove: O no! it is an ever-fixed mark,
+        That looks on tempests and is never shaken; It is the star to every wandering bark,
+        Whose worth's unknown, although his height be taken.
+        <span class="highlight">Love's</span> not Time's fool, though rosy lips and cheeks
+        Within his bending sickle's compass come;
+        <span class="highlight">Love</span> alters not with his brief hours and weeks,
+        But bears it out even to the edge of doom.
+    </div>
+
+</div>
+
+</body>
+</html>
