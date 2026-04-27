@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My First Bootstrap Page</title>
+
+  <!-- Bootstrap 3 CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+
+  <style>
+    body {
+      padding-top: 30px;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 15px;
+      border: 1px solid #eeeeee;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .jumbotron {
+      margin-bottom: 35px;
+    }
+
+    .jumbotron h1 {
+      font-size: 64px;
+      font-weight: 400;
+    }
+
+    .form-group {
+      margin-bottom: 35px;
+    }
+
+    .alert {
+      font-size: 24px;
+      padding: 24px 30px;
+      margin-bottom: 35px;
+    }
+
+    .bottom-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      font-size: 24px;
+    }
+
+    .badge {
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h1>My First Bootstrap Page</h1>
+    </div>
+
+    <div class="form-group">
+      <label for="inputText">Input:</label>
+      <input type="text" class="form-control" id="inputText" />
+    </div>
+
+    <div class="alert alert-success">
+      Successful alert
+    </div>
+
+    <div class="bottom-row">
+      <button class="btn btn-default">Button</button>
+      <span class="badge">badge</span>
+    </div>
+  </div>
+
+  <!-- Bootstrap 3 JavaScript dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>
