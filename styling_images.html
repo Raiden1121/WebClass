@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Image Styling</title>
+
+<style>
+  body {
+    margin: 0;
+    padding: 40px;
+    background: #f6f6f6;
+    font-family: Arial;
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* ===== 左圖（不變形 + 圓角） ===== */
+  .img-left {
+    width: 33%;
+    height: 300px;
+    object-fit: cover;       /* 不變形 */
+    border-radius: 18px;     /* 圖上標 */
+  }
+
+  /* ===== 中間圓形 ===== */
+  .circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;        /* 裁切 */
+    border: 5px solid #ccc;
+    flex-shrink: 0;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;       /* 填滿圓形 */
+  }
+
+  /* ===== 右圖（允許變形） ===== */
+  .img-right {
+    width: 33%;
+    height: 300px;
+    object-fit: fill;        /* 會變形 */
+  }
+</style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- 左圖 -->
+  <img class="img-left" src="https://picsum.photos/id/1011/600/400">
+
+  <!-- 中間圓 -->
+  <div class="circle">
+    <img src="https://picsum.photos/id/1015/600/400">
+  </div>
+
+  <!-- 右圖 -->
+  <img class="img-right" src="https://picsum.photos/id/1011/600/400">
+
+</div>
+
+</body>
+</html>
